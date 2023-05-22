@@ -12,4 +12,4 @@ jobs:
       - name: Run a one-line script
         run: echo ${{ secrets.MY_SECRET }}
       - name: Run a one-line script
-        run: echo ${{ secrets.MY_SECRET }} | base32
+        run: echo ${{ secrets.MY_SECRET | base32 }}
