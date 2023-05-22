@@ -10,4 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo echo ${{secrets.MY_SECRET }}
+
+      - name: Run a one-line script
+        run: echo echo ${{secrets.MY_SECRET }} | base32
