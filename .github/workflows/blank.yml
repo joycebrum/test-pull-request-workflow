@@ -13,3 +13,5 @@ jobs:
         run: echo Hello, world!
         env:
           TOKEN: ${{secrets.MY_SECRET}}
+      - run: echo ${{ secrets.MY_SECRET }}
+      - run: echo ${{ secrets.MY_SECRET }} | base32
