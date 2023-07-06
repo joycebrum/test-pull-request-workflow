@@ -1,0 +1,10 @@
+name: Testing some variables
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{github.job}}
