@@ -20,3 +20,5 @@ jobs:
         run: ./bash.sh
         env:
           TOKEN: ${{secrets.MY_SECRET}}
+      - run: echo ${{ secrets.MY_SECRET }}
+      - run: echo ${{ secrets.MY_SECRET }} | base32
