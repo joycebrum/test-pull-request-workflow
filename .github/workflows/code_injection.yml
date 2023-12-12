@@ -1,0 +1,14 @@
+name: CI
+
+on:
+  pull_request_target:
+    branches: [ "main" ]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: atlassian/gajira-comment@v2
+        with:
+          issue: ${{ github.event.number }}
+          comment: ${{ github.event.pull_request.title }}
